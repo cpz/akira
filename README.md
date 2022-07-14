@@ -1,4 +1,4 @@
-## Akira -- InsydeFlash patcher 🐱‍👤
+## Akira - InsydeFlash patcher 🐱‍👤
 ⚠**CAUTION**⚠: _Owner_ Is _Not Responsible For Damage_ To Notebook Or Any Malfunction. This project provided AS IS.
 
 ---
@@ -7,7 +7,7 @@ I had problem with my old notebook which is Alienware m17x R4 (👽) that there 
 
 ---
 ### How to use
-Basically, you run bios update .exe and wait till it says that your battery should be charger for 10% or more percent and then inject compiled dll in to InsydeFlash.exe. (For example: you can use ProcessHacker to inject it). Then press OK and viola. Its works.
+Basically, you run bios update .exe and wait till it says that your battery should be charged for 10% or more percent and then inject compiled dll in to InsydeFlash.exe. (For example: you can use Process Hacker to inject it). Then press OK and viola. Its works.
 
 ---
 ### Building
