@@ -46,15 +46,9 @@ CheckPowerStatusFn power_status_fn = nullptr;
 
 bool CheckPowerStatus(bool& a1, InsydeFlash* a2, bool& a3)
 {
+    // @note: @cpz: If battery or adapter is broken, battery value will be set to 0xFF, so we just force there 100% capacity of battery value
     if (a2->GetBatteryValue() != 100) a2->SetBatteryValue(100);
-    return true;
-}
 
-using CheckStatusFn = bool(__cdecl*)(void*);
-CheckStatusFn check_status_fn = nullptr;
-
-bool CheckStatus(void* a1)
-{
     return true;
 }
 
@@ -81,7 +75,7 @@ void OnImageLoad()
     }
 
     if (MH_CreateHook(check_power_status, &CheckPowerStatus,
-                      reinterpret_cast<LPVOID*>(&check_power_status)) != MH_OK)
+                      &check_power_status) != MH_OK)
     {
         MsgBox("Cannot create hook for CheckPowerStatus!");
         return;
