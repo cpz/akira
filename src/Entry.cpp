@@ -46,7 +46,7 @@ CheckPowerStatusFn power_status_fn = nullptr;
 
 bool CheckPowerStatus(bool& a1, InsydeFlash* a2, bool& a3)
 {
-    if (a2->GetBatteryValue() == 0xFF) a2->SetBatteryValue(100);
+    if (a2->GetBatteryValue() != 100) a2->SetBatteryValue(100);
     return true;
 }
 
